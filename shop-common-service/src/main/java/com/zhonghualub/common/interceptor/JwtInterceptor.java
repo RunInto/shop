@@ -45,6 +45,7 @@ public class JwtInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        System.out.println("进入统一认证中");
         // 1.通过request获取请求token信息
         String authorization = request.getHeader("Authorization");
         //判断请求头信息是否为空，或者是否已Bearer开头

@@ -30,6 +30,7 @@
         <shop.base.version>1.0.0</shop.base.version>
         <shop.common.version>1.0.0</shop.common.version>
         <!-- 第三方依赖 -->
+        <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
         <spring-cloud-alibaba.version>2.1.2.RELEASE</spring-cloud-alibaba.version>
         <mybatis.version>2.1.0</mybatis.version>
         <oracle.jdbc.version>12.1.0.1.0</oracle.jdbc.version>
@@ -72,11 +73,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
-        <!-- 内置Tomcat、Spring MVC -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+
         <!-- Json转换 -->
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -92,15 +89,15 @@
 <!--            <artifactId>spring-cloud-alibaba-sentinel-gateway</artifactId>-->
 <!--        </dependency>-->
         <!-- 配置中心 -->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+        </dependency>
         <!-- 注册中心 -->
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
 <!--        <dependency>-->
 <!--            <groupId>com.alibaba.cloud</groupId>-->
 <!--            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>-->
@@ -165,6 +162,7 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- SpringCloud Alibaba 依赖 -->
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
@@ -172,6 +170,15 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- SpringCloud 依赖 -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- SpringBoot 依赖 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>

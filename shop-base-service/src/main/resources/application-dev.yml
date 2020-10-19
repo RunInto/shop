@@ -1,7 +1,12 @@
 server:
   port: 9000
 
+
 spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
   # DB
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:XE
@@ -9,3 +14,8 @@ spring:
     password: oracle
     driver-class-name: oracle.jdbc.driver.OracleDriver
     type: com.alibaba.druid.pool.DruidDataSource
+
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -3,8 +3,8 @@
 /Users/ys/Desktop/shop/shop-common-service/src/main/java/com/zhonghualub/common/entity/ResultCode.java
 /Users/ys/Desktop/shop/shop-common-service/src/main/java/com/zhonghualub/common/utils/BeanMapUtils.java
 /Users/ys/Desktop/shop/shop-common-service/src/main/java/com/zhonghualub/common/exception/CommonException.java
-/Users/ys/Desktop/shop/shop-common-service/src/main/java/com/zhonghualub/common/ShopCommonServiceApplication.java
 /Users/ys/Desktop/shop/shop-common-service/src/main/java/com/zhonghualub/common/utils/PermissionConstants.java
 /Users/ys/Desktop/shop/shop-common-service/src/main/java/com/zhonghualub/common/interceptor/JwtInterceptor.java
 /Users/ys/Desktop/shop/shop-common-service/src/main/java/com/zhonghualub/common/entity/Result.java
 /Users/ys/Desktop/shop/shop-common-service/src/main/java/com/zhonghualub/common/utils/JwtUtils.java
+/Users/ys/Desktop/shop/shop-common-service/src/main/java/com/zhonghualub/common/config/SystemConfig.java

@@ -2,6 +2,10 @@ server:
   port: 9001
 
 spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
   # DB
   datasource:
     url: jdbc:oracle:thin:@localhost:1521:XE
@@ -13,3 +17,4 @@ spring:
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

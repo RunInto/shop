@@ -1,1 +1,4 @@
 /Users/ys/Desktop/shop/shop-base-service/src/main/java/com/zhonghualub/base/BaseApplication.java
+/Users/ys/Desktop/shop/shop-base-service/src/main/java/com/zhonghualub/base/controller/StudioController.java
+/Users/ys/Desktop/shop/shop-base-service/src/main/java/com/zhonghualub/base/service/IStudioService.java
+/Users/ys/Desktop/shop/shop-base-service/src/main/java/com/zhonghualub/base/service/impl/StudioServiceImpl.java

@@ -1,8 +1,8 @@
-server:
-  servlet:
-    context-path: /shop-user-service
+
 
 spring:
+  application:
+    name: shop-user-service
   profiles:
     active: ${profileActive}
 

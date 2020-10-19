@@ -1,1 +1,4 @@
+com/zhonghualub/base/controller/StudioController.class
 com/zhonghualub/base/BaseApplication.class
+com/zhonghualub/base/service/IStudioService.class
+com/zhonghualub/base/service/impl/StudioServiceImpl.class

@@ -5,11 +5,9 @@ import com.zhonghualub.common.entity.ResultCode;
 import com.zhonghualub.common.utils.JwtUtils;
 import com.zhonghualub.user.entity.ShopUser;
 import com.zhonghualub.user.service.IUserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,6 +17,7 @@ import java.util.Map;
  * desc:
  * date: 2020/10/19
  */
+@Slf4j
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -60,5 +59,11 @@ public class UserController {
             String token = jwtUtils.createJwt(user.getUserId(), user.getUserName(), map);
             return new Result(ResultCode.SUCCESS,token);
         }
+    }
+
+    @GetMapping("/detail")
+    public Result detail() {
+        log.info("user detail");
+        return null;
     }
 }

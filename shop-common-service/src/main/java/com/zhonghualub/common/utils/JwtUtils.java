@@ -1,6 +1,4 @@
 package com.zhonghualub.common.utils;
-
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
@@ -8,12 +6,14 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 import java.util.Map;
 
 @Getter
 @Setter
+@Component
 @ConfigurationProperties("jwt.config")
 public class JwtUtils {
     //签名私钥
