@@ -2235,3 +2235,365 @@ java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable ser
 10/19/2020 20:19:30 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
 10/19/2020 20:20:00 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
 10/19/2020 20:20:29 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:20:59 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:21:28 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:21:58 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:22:23 INFO  1.0.0 [Thread-19]o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'Nacso-Watch-Task-Scheduler'
+10/19/2020 20:22:23 INFO  1.0.0 [Thread-19]c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+10/19/2020 20:22:23 INFO  1.0.0 [Thread-19]c.a.n.c.naming - [BEAT] removing beat: DEFAULT_GROUP@@shop-user-service:169.254.133.33:9001 from beat map.
+10/19/2020 20:22:23 INFO  1.0.0 [Thread-19]c.a.n.c.naming - [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@shop-user-service with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceIdGenerator":"simple","ip":"169.254.133.33","ipDeleteTimeout":30000,"metadata":{},"port":9001,"weight":1.0}
+10/19/2020 20:22:23 WARN  1.0.0 [Thread-19]c.a.n.c.naming - failed to request http://127.0.0.1:8848/nacos/v1/ns/instance?app=unknown&namespaceId=public&port=9001&clusterName=DEFAULT&ip=169.254.133.33&ephemeral=true&serviceName=DEFAULT_GROUP%40%40shop-user-service&encoding=UTF-8 from 127.0.0.1
+10/19/2020 20:22:23 ERROR 1.0.0 [Thread-19]c.a.n.c.naming - [NA] failed to request 
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:698)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1593)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at com.alibaba.nacos.client.naming.net.HttpClient.getResult(HttpClient.java:111)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:90)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:468)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:229)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:246)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:233)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:92)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:156)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1061)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1058)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:946)
+10/19/2020 20:22:23 WARN  1.0.0 [Thread-19]c.a.n.c.naming - failed to request http://127.0.0.1:8848/nacos/v1/ns/instance?app=unknown&namespaceId=public&port=9001&clusterName=DEFAULT&ip=169.254.133.33&ephemeral=true&serviceName=DEFAULT_GROUP%40%40shop-user-service&encoding=UTF-8 from 127.0.0.1
+10/19/2020 20:22:23 ERROR 1.0.0 [Thread-19]c.a.n.c.naming - [NA] failed to request 
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:229)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:246)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:233)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:92)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:156)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1061)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1058)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:946)
+10/19/2020 20:22:23 WARN  1.0.0 [Thread-19]c.a.n.c.naming - failed to request http://127.0.0.1:8848/nacos/v1/ns/instance?app=unknown&namespaceId=public&port=9001&clusterName=DEFAULT&ip=169.254.133.33&ephemeral=true&serviceName=DEFAULT_GROUP%40%40shop-user-service&encoding=UTF-8 from 127.0.0.1
+10/19/2020 20:22:23 ERROR 1.0.0 [Thread-19]c.a.n.c.naming - [NA] failed to request 
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:229)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:246)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:233)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:92)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:156)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1061)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1058)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:946)
+10/19/2020 20:22:23 WARN  1.0.0 [Thread-19]c.a.n.c.naming - failed to request http://127.0.0.1:8848/nacos/v1/ns/instance?app=unknown&namespaceId=public&port=9001&clusterName=DEFAULT&ip=169.254.133.33&ephemeral=true&serviceName=DEFAULT_GROUP%40%40shop-user-service&encoding=UTF-8 from 127.0.0.1
+10/19/2020 20:22:23 ERROR 1.0.0 [Thread-19]c.a.n.c.naming - [NA] failed to request 
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:463)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:558)
+	at sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:339)
+	at sun.net.www.http.HttpClient.New(HttpClient.java:357)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1226)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1162)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1056)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:990)
+	at com.alibaba.nacos.client.naming.net.HttpClient.request(HttpClient.java:86)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.callServer(NamingProxy.java:433)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:482)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:229)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:246)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:233)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:92)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:156)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1061)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1058)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:946)
+10/19/2020 20:22:23 ERROR 1.0.0 [Thread-19]c.a.n.c.naming - request: /nacos/v1/ns/instance failed, servers: [127.0.0.1:8848], code: 500, msg: java.net.ConnectException: Connection refused (Connection refused)
+10/19/2020 20:22:23 ERROR 1.0.0 [Thread-19]c.a.c.n.r.NacosServiceRegistry - ERR_NACOS_DEREGISTER, de-register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='127.0.0.1:8848', endpoint='', namespace='', watchDelay=30000, logName='', service='shop-user-service', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='169.254.133.33', networkInterface='', port=9001, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null}},
+com.alibaba.nacos.api.exception.NacosException: failed to req API:/api//nacos/v1/ns/instance after all servers([127.0.0.1:8848]) tried: java.net.ConnectException: Connection refused (Connection refused)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:496)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:401)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:397)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.deregisterService(NamingProxy.java:229)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:246)
+	at com.alibaba.nacos.client.naming.NacosNamingService.deregisterInstance(NacosNamingService.java:233)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.deregister(NacosServiceRegistry.java:92)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.deregister(AbstractAutoServiceRegistration.java:256)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.stop(AbstractAutoServiceRegistration.java:271)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.destroy(AbstractAutoServiceRegistration.java:208)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:321)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:156)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:242)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1061)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1054)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1058)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:946)
+10/19/2020 20:22:23 INFO  1.0.0 [Thread-19]c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+10/19/2020 20:22:24 ERROR 1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.h.ServerHttpAgent - [NACOS ConnectException httpPost] currentServerAddr: http://localhost:8848, err : Connection refused (Connection refused)
+10/19/2020 20:22:24 ERROR 1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.h.ServerHttpAgent - [NACOS ConnectException httpPost] currentServerAddr: http://localhost:8848, err : Connection refused (Connection refused)
+10/19/2020 20:22:24 ERROR 1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.h.ServerHttpAgent - [NACOS ConnectException httpPost] currentServerAddr: http://localhost:8848, err : Connection refused (Connection refused)
+10/19/2020 20:22:24 ERROR 1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.h.ServerHttpAgent - [NACOS ConnectException httpPost] currentServerAddr: http://localhost:8848, err : Connection refused (Connection refused)
+10/19/2020 20:22:24 ERROR 1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - [fixed-localhost_8848] [check-update] get changed dataId exception
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:170)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:386)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:354)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:521)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+10/19/2020 20:22:24 ERROR 1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - longPolling error : 
+java.net.ConnectException: [NACOS HTTP-POST] The maximum number of tolerable server reconnection errors has been reached
+	at com.alibaba.nacos.client.config.http.ServerHttpAgent.httpPost(ServerHttpAgent.java:170)
+	at com.alibaba.nacos.client.config.http.MetricsHttpAgent.httpPost(MetricsHttpAgent.java:64)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateConfigStr(ClientWorker.java:386)
+	at com.alibaba.nacos.client.config.impl.ClientWorker.checkUpdateDataIds(ClientWorker.java:354)
+	at com.alibaba.nacos.client.config.impl.ClientWorker$LongPollingRunnable.run(ClientWorker.java:521)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+10/19/2020 20:25:50 INFO  1.0.0 [main]c.a.n.c.c.i.LocalConfigInfoProcessor - LOCAL_SNAPSHOT_PATH:/Users/ys/nacos/config
+10/19/2020 20:25:50 INFO  1.0.0 [main]c.a.n.c.c.i.Limiter - limitTime:5.0
+10/19/2020 20:25:50 WARN  1.0.0 [main]c.a.c.n.c.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[shop-user-service] & group[DEFAULT_GROUP]
+10/19/2020 20:25:50 WARN  1.0.0 [main]c.a.c.n.c.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[shop-user-service.properties] & group[DEFAULT_GROUP]
+10/19/2020 20:25:50 WARN  1.0.0 [main]c.a.c.n.c.NacosPropertySourceBuilder - Ignore the empty nacos configuration and get it based on dataId[shop-user-service-dev.properties] & group[DEFAULT_GROUP]
+10/19/2020 20:25:50 INFO  1.0.0 [main]o.s.c.b.c.PropertySourceBootstrapConfiguration - Located property source: [BootstrapPropertySource {name='bootstrapProperties-shop-user-service-dev.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shop-user-service.properties,DEFAULT_GROUP'}, BootstrapPropertySource {name='bootstrapProperties-shop-user-service,DEFAULT_GROUP'}]
+10/19/2020 20:25:50 INFO  1.0.0 [main]c.z.u.UserServiceApplication - The following profiles are active: dev
+10/19/2020 20:25:51 INFO  1.0.0 [main]o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+10/19/2020 20:25:51 INFO  1.0.0 [main]o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+10/19/2020 20:25:51 INFO  1.0.0 [main]o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+10/19/2020 20:25:51 INFO  1.0.0 [main]o.s.c.c.s.GenericScope - BeanFactory id=ad682db8-d0c4-3c4a-b201-b940e462bb8b
+10/19/2020 20:25:51 INFO  1.0.0 [main]o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 9001 (http)
+10/19/2020 20:25:51 INFO  1.0.0 [main]o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-9001"]
+10/19/2020 20:25:51 INFO  1.0.0 [main]o.a.c.c.StandardService - Starting service [Tomcat]
+10/19/2020 20:25:51 INFO  1.0.0 [main]o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.38]
+10/19/2020 20:25:51 INFO  1.0.0 [main]o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+10/19/2020 20:25:51 INFO  1.0.0 [main]o.s.w.c.ContextLoader - Root WebApplicationContext: initialization completed in 975 ms
+10/19/2020 20:25:52 WARN  1.0.0 [main]c.a.d.p.DruidAbstractDataSource - oracle.jdbc.driver.OracleDriver is deprecated.Having use oracle.jdbc.OracleDriver.
+10/19/2020 20:25:52 WARN  1.0.0 [main]c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+10/19/2020 20:25:52 INFO  1.0.0 [main]c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10/19/2020 20:25:52 WARN  1.0.0 [main]c.n.c.s.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+10/19/2020 20:25:52 INFO  1.0.0 [main]c.n.c.s.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+10/19/2020 20:25:52 INFO  1.0.0 [main]o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+10/19/2020 20:25:52 INFO  1.0.0 [main]c.a.n.c.naming - initializer namespace from System Property :null
+10/19/2020 20:25:52 INFO  1.0.0 [main]c.a.n.c.naming - initializer namespace from System Environment :null
+10/19/2020 20:25:52 INFO  1.0.0 [main]c.a.n.c.naming - initializer namespace from System Property :null
+10/19/2020 20:25:53 INFO  1.0.0 [main]o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-9001"]
+10/19/2020 20:25:53 INFO  1.0.0 [main]o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 9001 (http) with context path ''
+10/19/2020 20:25:53 INFO  1.0.0 [main]c.a.n.c.naming - [BEAT] adding beat: {"cluster":"DEFAULT","ip":"169.254.184.25","metadata":{"preserved.register.source":"SPRING_CLOUD"},"period":5000,"port":9001,"scheduled":false,"serviceName":"DEFAULT_GROUP@@shop-user-service","stopped":false,"weight":1.0} to beat map.
+10/19/2020 20:25:53 INFO  1.0.0 [main]c.a.n.c.naming - [REGISTER-SERVICE] public registering service DEFAULT_GROUP@@shop-user-service with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"ip":"169.254.184.25","ipDeleteTimeout":30000,"metadata":{"preserved.register.source":"SPRING_CLOUD"},"port":9001,"weight":1.0}
+10/19/2020 20:25:53 INFO  1.0.0 [main]c.a.c.n.r.NacosServiceRegistry - nacos registry, DEFAULT_GROUP shop-user-service 169.254.184.25:9001 register finished
+10/19/2020 20:25:53 INFO  1.0.0 [main]c.z.u.UserServiceApplication - Started UserServiceApplication in 3.383 seconds (JVM running for 4.092)
+10/19/2020 20:25:53 INFO  1.0.0 [main]c.a.n.c.c.i.ClientWorker - [fixed-localhost_8848] [subscribe] shop-user-service.properties+DEFAULT_GROUP
+10/19/2020 20:25:53 INFO  1.0.0 [main]c.a.n.c.c.i.CacheData - [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=shop-user-service.properties, group=DEFAULT_GROUP, cnt=1
+10/19/2020 20:25:53 INFO  1.0.0 [main]c.a.n.c.c.i.ClientWorker - [fixed-localhost_8848] [subscribe] shop-user-service-dev.properties+DEFAULT_GROUP
+10/19/2020 20:25:53 INFO  1.0.0 [main]c.a.n.c.c.i.CacheData - [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=shop-user-service-dev.properties, group=DEFAULT_GROUP, cnt=1
+10/19/2020 20:25:53 INFO  1.0.0 [main]c.a.n.c.c.i.ClientWorker - [fixed-localhost_8848] [subscribe] shop-user-service+DEFAULT_GROUP
+10/19/2020 20:25:53 INFO  1.0.0 [main]c.a.n.c.c.i.CacheData - [fixed-localhost_8848] [add-listener] ok, tenant=, dataId=shop-user-service, group=DEFAULT_GROUP, cnt=1
+10/19/2020 20:25:53 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:26:22 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:26:52 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:27:13 INFO  1.0.0 [http-nio-9001-exec-1]o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+10/19/2020 20:27:13 INFO  1.0.0 [http-nio-9001-exec-1]o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+10/19/2020 20:27:13 INFO  1.0.0 [http-nio-9001-exec-1]o.s.w.s.DispatcherServlet - Completed initialization in 21 ms
+10/19/2020 20:27:14 INFO  1.0.0 [http-nio-9001-exec-1]c.a.d.p.DruidDataSource - {dataSource-1} inited
+10/19/2020 20:27:21 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:27:51 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:28:20 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:28:50 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:29:19 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:29:49 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:30:19 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:30:48 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:31:18 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:31:47 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:32:17 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:32:46 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:33:16 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:33:45 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:34:15 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:34:44 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:35:14 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:35:43 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:36:13 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:36:42 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:37:12 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:37:41 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:38:11 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:38:40 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:39:10 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:39:39 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:40:09 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:40:38 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:41:08 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:41:37 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:42:07 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:42:36 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:43:06 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:43:35 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:44:05 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:44:34 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:44:49 WARN  1.0.0 [http-nio-9001-exec-3]o.s.w.s.PageNotFound - No mapping for POST /zy/user/login
+10/19/2020 20:44:52 WARN  1.0.0 [http-nio-9001-exec-4]o.s.w.s.PageNotFound - No mapping for POST /zy/user/login
+10/19/2020 20:44:53 WARN  1.0.0 [http-nio-9001-exec-5]o.s.w.s.PageNotFound - No mapping for POST /zy/user/login
+10/19/2020 20:44:54 WARN  1.0.0 [http-nio-9001-exec-6]o.s.w.s.PageNotFound - No mapping for POST /zy/user/login
+10/19/2020 20:44:59 WARN  1.0.0 [http-nio-9001-exec-7]o.s.w.s.PageNotFound - No mapping for POST /zy/user/login
+10/19/2020 20:45:01 WARN  1.0.0 [http-nio-9001-exec-8]o.s.w.s.PageNotFound - No mapping for POST /zy/user/login
+10/19/2020 20:45:04 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:45:18 WARN  1.0.0 [http-nio-9001-exec-9]o.s.w.s.PageNotFound - No mapping for POST /zy/user/login
+10/19/2020 20:45:33 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:46:03 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:46:32 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:47:02 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:47:17 WARN  1.0.0 [http-nio-9001-exec-1]o.s.w.s.PageNotFound - No mapping for POST /zy/user/login
+10/19/2020 20:47:31 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:48:01 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:48:21 WARN  1.0.0 [http-nio-9001-exec-3]o.s.w.s.PageNotFound - No mapping for POST /zy/user/login
+10/19/2020 20:48:30 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:49:00 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:49:29 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:49:59 INFO  1.0.0 [com.alibaba.nacos.client.Worker.longPolling.fixed-localhost_8848]c.a.n.c.c.i.ClientWorker - get changedGroupKeys:[]
+10/19/2020 20:50:07 INFO  1.0.0 [Thread-20]o.s.s.c.ThreadPoolTaskScheduler - Shutting down ExecutorService 'Nacso-Watch-Task-Scheduler'
+10/19/2020 20:50:07 INFO  1.0.0 [Thread-20]c.a.c.n.r.NacosServiceRegistry - De-registering from Nacos Server now...
+10/19/2020 20:50:07 INFO  1.0.0 [Thread-20]c.a.n.c.naming - [BEAT] removing beat: DEFAULT_GROUP@@shop-user-service:169.254.184.25:9001 from beat map.
+10/19/2020 20:50:07 INFO  1.0.0 [Thread-20]c.a.n.c.naming - [DEREGISTER-SERVICE] public deregistering service DEFAULT_GROUP@@shop-user-service with instance: {"clusterName":"DEFAULT","enabled":true,"ephemeral":true,"healthy":true,"instanceHeartBeatInterval":5000,"instanceHeartBeatTimeOut":15000,"instanceIdGenerator":"simple","ip":"169.254.184.25","ipDeleteTimeout":30000,"metadata":{},"port":9001,"weight":1.0}
+10/19/2020 20:50:07 INFO  1.0.0 [Thread-20]c.a.c.n.r.NacosServiceRegistry - De-registration finished.
+10/19/2020 20:50:07 INFO  1.0.0 [Thread-20]c.a.d.p.DruidDataSource - {dataSource-1} closed
