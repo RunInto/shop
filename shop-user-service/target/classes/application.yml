@@ -1,0 +1,23 @@
+server:
+  servlet:
+    context-path: /shop-user-service
+
+spring:
+  profiles:
+    active: dev
+
+logging:
+  config: classpath:logback.xml
+  level:
+    org:
+      springframework:
+        web: info
+
+# sql xml文件位置
+mybatis:
+  mapper-locations: classpath*:mybatis/*.xml,classpath*:mybatis/*/*.xml
+
+jwt:
+  config:
+    key: shop
+    ttl: 3600000

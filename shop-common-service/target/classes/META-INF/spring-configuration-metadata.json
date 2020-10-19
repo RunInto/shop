@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "jwt.config",
+      "type": "com.zhonghualub.common.utils.JwtUtils",
+      "sourceType": "com.zhonghualub.common.utils.JwtUtils"
+    }
+  ],
+  "properties": [
+    {
+      "name": "jwt.config.key",
+      "type": "java.lang.String",
+      "sourceType": "com.zhonghualub.common.utils.JwtUtils"
+    },
+    {
+      "name": "jwt.config.ttl",
+      "type": "java.lang.Long",
+      "sourceType": "com.zhonghualub.common.utils.JwtUtils"
+    }
+  ],
+  "hints": []
+}

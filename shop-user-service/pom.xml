@@ -26,10 +26,16 @@
 			<version>${shop.base.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>com.zhonghualub.common</groupId>
+			<artifactId>common</artifactId>
+			<version>${shop.common.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>

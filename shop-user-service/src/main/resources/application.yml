@@ -16,3 +16,8 @@ logging:
 # sql xml文件位置
 mybatis:
   mapper-locations: classpath*:mybatis/*.xml,classpath*:mybatis/*/*.xml
+
+jwt:
+  config:
+    key: shop
+    ttl: 3600000

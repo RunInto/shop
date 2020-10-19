@@ -7,9 +7,9 @@
     </appender>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/export/logs/pms/pms-apartment/pms-apartment-admin/log.log</file>
+        <file>export/logs/shop-user-service/log.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/export/logs/pms/pms-apartment/pms-apartment-admin/log.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <fileNamePattern>export/logs/shop-user-service/log.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
             <maxHistory>90</maxHistory>
         </rollingPolicy>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
@@ -22,9 +22,9 @@
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>ERROR</level>
         </filter>
-        <File>/export/logs/pms/pms-apartment/pms-apartment-admin/error.log</File>
+        <File>export/logs/shop-user-service/error.log</File>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/export/logs/pms/pms-apartment/pms-apartment-admin/error-%d{yyyy-MM-dd}.log.%i
+            <fileNamePattern>export/logs/shop-user-service/error-%d{yyyy-MM-dd}.log.%i
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>500MB</maxFileSize>
@@ -38,9 +38,9 @@
     </appender>
 
     <appender name="SQL" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/export/logs/pms/pms-apartment/pms-apartment-admin/sql.log</file>
+        <file>export/logs/shop-user-service/sql.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>/export/logs/pms/pms-apartment/pms-apartment-admin/sql.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+            <fileNamePattern>export/logs/shop-user-service/sql.%d{yyyy-MM-dd}.log.gz</fileNamePattern>
             <maxHistory>90</maxHistory>
         </rollingPolicy>
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
