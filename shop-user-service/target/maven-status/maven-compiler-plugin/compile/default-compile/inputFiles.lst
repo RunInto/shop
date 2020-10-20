@@ -1,7 +1,7 @@
 /Users/ys/Desktop/shop/shop-user-service/src/main/java/com/zhonghualub/user/entity/ShopUser.java
 /Users/ys/Desktop/shop/shop-user-service/src/main/java/com/zhonghualub/user/model/UserModel.java
+/Users/ys/Desktop/shop/shop-user-service/src/main/java/com/zhonghualub/user/UserServiceApplication.java
 /Users/ys/Desktop/shop/shop-user-service/src/main/java/com/zhonghualub/user/service/IUserService.java
-/Users/ys/Desktop/shop/shop-user-service/src/main/java/com/zhonghualub/user/ShopUserServiceApplication.java
 /Users/ys/Desktop/shop/shop-user-service/src/main/java/com/zhonghualub/user/controller/UserController.java
 /Users/ys/Desktop/shop/shop-user-service/src/main/java/com/zhonghualub/user/repository/ShopUserMapper.java
 /Users/ys/Desktop/shop/shop-user-service/src/main/java/com/zhonghualub/user/service/impl/UserService.java

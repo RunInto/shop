@@ -1,7 +1,6 @@
 com/zhonghualub/user/service/IUserService.class
 com/zhonghualub/user/model/UserModel.class
+com/zhonghualub/user/UserServiceApplication.class
 com/zhonghualub/user/service/impl/UserService.class
 com/zhonghualub/user/repository/ShopUserMapper.class
-com/zhonghualub/user/controller/UserController.class
 com/zhonghualub/user/entity/ShopUser.class
-com/zhonghualub/user/ShopUserServiceApplication.class

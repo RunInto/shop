@@ -1,5 +1,6 @@
 package com.zhonghualub.user.controller;
 
+
 import com.zhonghualub.common.entity.Result;
 import com.zhonghualub.common.entity.ResultCode;
 import com.zhonghualub.common.utils.JwtUtils;
@@ -36,9 +37,9 @@ public class UserController {
      */
     @RequestMapping(value="/login",method = RequestMethod.POST)
     public Result login(@RequestBody Map<String,String> loginMap) {
-        String mobile = loginMap.get("mobile");
+        String username = loginMap.get("username");
         String password = loginMap.get("password");
-        ShopUser user = userService.findByMobile(mobile);
+        ShopUser user = userService.findByMobile(username);
         //登录失败
         if(user == null || !user.getUserPassword().equals(password)) {
             return new Result(ResultCode.MOBILEORPASSWORDERROR);
@@ -61,9 +62,9 @@ public class UserController {
         }
     }
 
-    @GetMapping("/detail")
+    @GetMapping("/info")
     public Result detail() {
         log.info("user detail");
-        return null;
+        return new Result(ResultCode.SUCCESS, "success");
     }
 }

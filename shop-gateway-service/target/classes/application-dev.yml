@@ -3,6 +3,9 @@ server:
 
 
 spring:
+  main:
+    allow-bean-definition-overriding: true # 允许bean定义覆盖
+
   application:
     name: shop-gateway-service
   cloud:
@@ -45,3 +48,5 @@ management: #开启端点监控
     web:
       exposure:
         include: "*"
+
+
